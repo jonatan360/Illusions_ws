@@ -24,30 +24,16 @@ Complete la tabla:
 
 | Ilusión      | Categoria   | Referencia            | Tipo de interactividad (si aplica) | URL código base (si aplica) |
 |--------------|-------------|-----------------------|------------------------------------|-----------------------------|
-|Distorted     | I.O. de     | Hering Illusion (#12) |                                    |                             |
-|lines         | distorsion  | https://goo.gl/zt8PZ3 |                                    |                             |
-|--------------|-------------|-----------------------|------------------------------------|-----------------------------|
-|Rotating      | I.O. psico- | Filling in the After- |                                    |                             |
-|polygons      | lógicas     | image after the Image |                                    |                             |
-|              |             | https://goo.gl/Ay9a1B |                                    |                             |
-|--------------|-------------|-----------------------|------------------------------------|-----------------------------|
-|Scintillating | I.O. psico- | Scintillating grid    |                                    |                             |
-|grid          | lógicas     | https://goo.gl/5r5F4y |                                    |                             |
-|--------------|-------------|-----------------------|------------------------------------|-----------------------------|
-|              |             |                       |                                    |                             |
-|              |             |                       |                                    |                             |
-|--------------|-------------|-----------------------|------------------------------------|-----------------------------|
-|              |             |                       |                                    |                             |
-|              |             |                       |                                    |                             |
-|--------------|-------------|-----------------------|------------------------------------|-----------------------------|
-|              |             |                       |                                    |                             |
-|              |             |                       |                                    |                             |
-|--------------|-------------|-----------------------|------------------------------------|-----------------------------|
+|Distorted lines | I.O. de distorsion   | Hering Illusion (#12) https://goo.gl/zt8PZ3 |   |   |
+|Rotating polygons | I.O. psicológicas | Filling in the Afterimage after the Image https://goo.gl/Ay9a1B |   |   |        
+|Scintillating grid | I.O. psicológicas | Scintillating grid https://goo.gl/5r5F4y   |   |   |    
 
 
 2. Describa brevememente las referencias estudiadas y los posibles temas en los que le gustaría profundizar:
+
 Se estudiaron los diferentes tipos de ilusiones ópticas, tales como las literales, las psicológicas y las cognitivas y sus subcategorías. Se encontró que muchas veces las ilusiones fueron efectos descubiertos por casualidad a los que se les ha intentado dar una explicación científica y así, han ampliado el entendimiento sobre los fenómenos que excitan el ojo humano.
 Una vez se llega a una conclusión sobre las causas que provocan dichos efectos en la percepción ocular humana, el siguiente paso lleva a tratar de discretizarlos para poder volverlos programables y reproducibles en un computador.
+
 Al grupo de trabajo de este taller le gustaría profundizar en las técnicas de discretización para lograr efectos visuales como los que se usan en las películas.
 
 ## Entrega
