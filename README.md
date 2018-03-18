@@ -27,6 +27,7 @@ Complete la tabla:
 |Distorted lines | I.O. de distorsion   | Hering Illusion (#12) https://goo.gl/zt8PZ3 |   |   |
 |Rotating polygons | I.O. psicológicas | Filling in the Afterimage after the Image https://goo.gl/Ay9a1B |   |   |        
 |Scintillating grid | I.O. psicológicas | Scintillating grid https://goo.gl/5r5F4y   |   |   |    
+|Black and white gride | I.O. de distorsion | Cuadrados y líneas https://goo.gl/yyjy2a  | Se agrega o quita el efecto al clickear con el mouse  |   |    
 
 
 2. Describa brevememente las referencias estudiadas y los posibles temas en los que le gustaría profundizar:
