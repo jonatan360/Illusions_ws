@@ -3,8 +3,8 @@ boolean flag_click = false;
 float size_box = 0.02;
 
 
-int size_x = 90;
-int size_y = 90;
+int size_x = 80;
+int size_y = 80;
 int[][] my_board = new int[size_x][size_y];
 float[][]positions_x = new float[size_x][size_y];
 float[][]positions_y = new float[size_x][size_y];
@@ -337,9 +337,27 @@ void draw_board_purple(){
   rect_2(positions_x[0][46],positions_y[39][0]);
   rect_2(positions_x[0][48],positions_y[39][0]);
      
-  
+  // Row 40
+  rect_2(positions_x[0][4],positions_y[40][0]);
+  rect_2(positions_x[0][6],positions_y[40][0]);
+  rect_2(positions_x[0][8],positions_y[40][0]);
+  rect_2(positions_x[0][10],positions_y[40][0]);
+
+  rect_2(positions_x[0][47],positions_y[40][0]);
+  rect_2(positions_x[0][49],positions_y[40][0]);
+  rect_2(positions_x[0][51],positions_y[40][0]);
+    
+  // Row 41
+  rect_2(positions_x[0][3],positions_y[41][0]);
+  rect_2(positions_x[0][5],positions_y[41][0]);
+  rect_2(positions_x[0][7],positions_y[41][0]);
+ 
+  rect_2(positions_x[0][48],positions_y[41][0]);
+  rect_2(positions_x[0][50],positions_y[41][0]);
+
     
   
+    
   
   
   
