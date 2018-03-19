@@ -6,8 +6,9 @@
 boolean[][] rects; // twodimensional array, think rows and columns
 boolean flag_click = false;
 
-float size_box = 0.1;
-float size_box_1 = 0.03;
+float size_box = 0.08;
+float size_box_1 = 0.02;
+int distance_box_1 = 9;
 float margin = 3;
 int fill_black = 0;
 int fill_white = 255;
@@ -42,11 +43,6 @@ int[][] my_rects = new int[my_rects_effect.length][my_rects_effect.length];
 float[][]positions_x = new float[my_rects.length][my_rects.length];
 float[][]positions_y = new float[my_rects.length][my_rects.length];
 
-
-
-
-
-
 void setup (){
   
   size(500,500);
@@ -59,8 +55,6 @@ void setup (){
     for (int c=0; c<=my_rects.length-1; c++ ){ // cols
      positions_x[r][c] = c*size_box*width;
      positions_y[r][c] = r*size_box*height;
-     //println(positions_x[r][c]);
-   //  println(positions_y[r][c]);
     }
   }  
   
@@ -171,9 +165,8 @@ void rect_3 (float r, float c){ // Black with white in 1 and 4
   fill(fill_black);
   rect(r, c, width*size_box,height*size_box); 
   fill(fill_white);
-  stroke(3);
   rect(r+margin, c+margin, width*size_box_1,height*size_box_1); 
-  rect(r+margin *10, c+margin*10, width*size_box_1 ,height*size_box_1); 
+  rect(r+margin *distance_box_1, c+margin*distance_box_1, width*size_box_1 ,height*size_box_1); 
 }
 
 
@@ -181,19 +174,19 @@ void rect_4 (float r, float c){ // White with black in 1 and 4
   fill(fill_white);
   rect(r, c, width*size_box,height*size_box); 
   fill(fill_black);
-  stroke(3);
+  
   rect(r+margin, c+margin, width*size_box_1,height*size_box_1);
-  rect(r+margin *10, c+margin*10, width*size_box_1 ,height*size_box_1); 
+  rect(r+margin *distance_box_1, c+margin*distance_box_1, width*size_box_1 ,height*size_box_1); 
 }
 
 void rect_5 (float r, float c){ // Black with black in 2 and 3
-  stroke(3);
+  
   fill(fill_black);
   rect(r, c, width*size_box,height*size_box); 
   fill(fill_white);
-  stroke(4);
-  rect(r+margin, c+margin*10, width*size_box_1,height*size_box_1);
-  rect(r+margin*10, c+margin, width*size_box_1 ,height*size_box_1); 
+  
+  rect(r+margin, c+margin*distance_box_1, width*size_box_1,height*size_box_1);
+  rect(r+margin*distance_box_1, c+margin, width*size_box_1 ,height*size_box_1); 
 }
 
 
@@ -203,8 +196,8 @@ void rect_6 (float r, float c){ // White with black in 2 and 3
   rect(r, c, width*size_box,height*size_box); 
   fill(fill_black);
   stroke(3);
-  rect(r+margin, c+margin*11, width*size_box_1,height*size_box_1); // Down
-  rect(r+margin*11, c+margin, width*size_box_1 ,height*size_box_1); // Up
+  rect(r+margin, c+margin*distance_box_1, width*size_box_1,height*size_box_1); // Down
+  rect(r+margin*distance_box_1, c+margin, width*size_box_1 ,height*size_box_1); // Up
 }
 
 void rect_7 (float r, float c){ // Black with white in 4 and 3
@@ -213,8 +206,8 @@ void rect_7 (float r, float c){ // Black with white in 4 and 3
   rect(r, c, width*size_box,height*size_box); 
   fill(fill_white);
   stroke(3);
-  rect(r+margin, c+margin*11, width*size_box_1,height*size_box_1);
-  rect(r+margin*11, c+margin*11, width*size_box_1 ,height*size_box_1); 
+  rect(r+margin, c+margin*distance_box_1, width*size_box_1,height*size_box_1);
+  rect(r+margin*distance_box_1, c+margin*distance_box_1, width*size_box_1 ,height*size_box_1); 
 }
 
 void rect_8 (float r, float c){ // White with black in 4 and 3
@@ -223,8 +216,8 @@ void rect_8 (float r, float c){ // White with black in 4 and 3
   rect(r, c, width*size_box,height*size_box); 
   fill(fill_black);
   stroke(3);
-  rect(r+margin, c+margin*11, width*size_box_1,height*size_box_1);
-  rect(r+margin*11, c+margin*11, width*size_box_1 ,height*size_box_1); 
+  rect(r+margin, c+margin*distance_box_1, width*size_box_1,height*size_box_1);
+  rect(r+margin*distance_box_1, c+margin*distance_box_1, width*size_box_1 ,height*size_box_1); 
 }
 
 void rect_9 (float r, float c){ // Black with white in 4 and 2
@@ -233,8 +226,8 @@ void rect_9 (float r, float c){ // Black with white in 4 and 2
   rect(r, c, width*size_box,height*size_box); 
   fill(fill_white);
   stroke(3);
-  rect(r+margin*11, c+margin, width*size_box_1,height*size_box_1);
-  rect(r+margin*11, c+margin*11, width*size_box_1 ,height*size_box_1); 
+  rect(r+margin*distance_box_1, c+margin, width*size_box_1,height*size_box_1);
+  rect(r+margin*distance_box_1, c+margin*distance_box_1, width*size_box_1 ,height*size_box_1); 
 }
 
 void rect_10 (float r, float c){ // Black with white in 4 and 2
@@ -243,8 +236,8 @@ void rect_10 (float r, float c){ // Black with white in 4 and 2
   rect(r, c, width*size_box,height*size_box); 
   fill(fill_black);
   stroke(3);
-  rect(r+margin*11, c+margin, width*size_box_1,height*size_box_1);
-  rect(r+margin*11, c+margin*11, width*size_box_1 ,height*size_box_1); 
+  rect(r+margin*distance_box_1, c+margin, width*size_box_1,height*size_box_1);
+  rect(r+margin*distance_box_1, c+margin*distance_box_1, width*size_box_1 ,height*size_box_1); 
 }
 
 void rect_11 (float r, float c){ // Black with white in 1 and 3
@@ -253,7 +246,7 @@ void rect_11 (float r, float c){ // Black with white in 1 and 3
   rect(r, c, width*size_box,height*size_box); 
   fill(fill_white);
   stroke(3);
-  rect(r+margin, c+margin*11, width*size_box_1,height*size_box_1);
+  rect(r+margin, c+margin*distance_box_1, width*size_box_1,height*size_box_1);
   rect(r+margin, c+margin, width*size_box_1 ,height*size_box_1); 
 }
 
@@ -263,7 +256,7 @@ void rect_12 (float r, float c){ // White with white in 1 and 3
   rect(r, c, width*size_box,height*size_box); 
   fill(fill_black);
   stroke(3);
-  rect(r+margin, c+margin*11, width*size_box_1,height*size_box_1);
+  rect(r+margin, c+margin*distance_box_1, width*size_box_1,height*size_box_1);
   rect(r+margin, c+margin, width*size_box_1 ,height*size_box_1); 
 }
 
@@ -274,7 +267,7 @@ void rect_13 (float r, float c){ // White with white in 1 and 2
   fill(fill_white);
   stroke(3);
   rect(r+margin, c+margin, width*size_box_1,height*size_box_1); // Left
-  rect(r+margin*11, c+margin, width*size_box_1 ,height*size_box_1); // Right
+  rect(r+margin*distance_box_1, c+margin, width*size_box_1 ,height*size_box_1); // Right
 }
 
 void rect_14 (float r, float c){ // White with white in 1 and 2
@@ -284,5 +277,5 @@ void rect_14 (float r, float c){ // White with white in 1 and 2
   fill(fill_black);
   stroke(3);
   rect(r+margin, c+margin, width*size_box_1,height*size_box_1); // Left
-  rect(r+margin*11, c+margin, width*size_box_1 ,height*size_box_1); // Right
+  rect(r+margin*distance_box_1, c+margin, width*size_box_1 ,height*size_box_1); // Right
 }
