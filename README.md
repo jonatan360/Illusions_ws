@@ -25,10 +25,11 @@ Complete la tabla:
 | Ilusión      | Categoria   | Referencia            | Tipo de interactividad (si aplica) | URL código base (si aplica) |
 |--------------|-------------|-----------------------|------------------------------------|-----------------------------|
 |Distorted lines | I.O. de distorsion   | Hering Illusion (#12) https://goo.gl/zt8PZ3 |   |   |
-|Rotating polygons | I.O. psicológicas | Filling in the Afterimage after the Image https://goo.gl/Ay9a1B |   |   |        
+|Rotating polygons | I.O. psicológicas(Movimiento) | Filling in the Afterimage after the Image https://goo.gl/Ay9a1B |   |   |        
 |Scintillating grid | I.O. psicológicas | Scintillating grid https://goo.gl/5r5F4y   |   |   |    
-|Black and white gride | I.O. de distorsion | Cuadrados y líneas https://goo.gl/yyjy2a  | Con el clic del mouse se ve el tablero con o sin efecto visual  |   | 
-|Color Illusion| I.O. de psicológicas | Simple Little Color Illusion https://goo.gl/raCQon  | Presionando los números del 1 al 7 el usuario puede percibir la ilusión a distintas distancias, con la tecla 0 se muestra el tablero sin el efecto visual  |   |    
+|Black and white gride | I.O. de distorsion(Interactiva) | Cuadrados y líneas https://goo.gl/yyjy2a  | Con el clic del mouse se ve el tablero con o sin efecto visual  |   | 
+|Color Illusion| I.O. de psicológicas (Interactiva) | Simple Little Color Illusion https://goo.gl/raCQon  | Presionando los números del 1 al 7 el usuario puede percibir la ilusión a distintas distancias, con la tecla 0 se muestra el tablero sin el efecto visual  |   |    
+|Motion Binding | I.O. de psicológicas(Movimiento)   | Motion Binding https://goo.gl/bx5ZAh |   |   |
 
 
 2. Describa brevememente las referencias estudiadas y los posibles temas en los que le gustaría profundizar:
