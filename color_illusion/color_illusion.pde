@@ -1,6 +1,5 @@
-boolean flag_click = false;
-
-float size_box = 0.02;
+float initial_size_box = 0.01;
+float size_box = initial_size_box;
 
 
 int size_x = 80;
@@ -16,30 +15,29 @@ int[]positions_purple_x = new int[size_x];
 int[]positions_purple_y = new int[size_x];
 
 
-
-
-void setup (){
-  size(500,500);
-  fill(0);
-  noStroke();
-  //change_rects(my_rects_normal);
-  
- 
+void calculate_location(){
   for (int r=0; r<size_x; r++ ){ // rows
     for (int c=0; c<size_y; c++ ){ // cols
      positions_x[r][c] = c*size_box*width;
      positions_y[r][c] = r*size_box*height;
     }
   }  
-  draw_board();
+}
 
+void setup (){
+  size(500,500);
+  fill(0);
+  noStroke();
+  size_box = initial_size_box * 2;
+  calculate_location();
+  draw_board_purple();
 }
 
 void draw_board(){
+  calculate_location();
   background(255); // clear background with white
   for (int x=0; x<size_x; x++) {
     for (int y=0; y<size_y; y++) {
-      println(x+y);
       if( (x+y)%2 != 0){
         rect_3(positions_x[x][y],positions_y[x][y]); 
       } else {
@@ -49,52 +47,62 @@ void draw_board(){
    }
 }
 
+
+
+void draw(){ 
+  if (key == '1' || key == '2' || key == '3'  || key == '4' || key == '5'  || key == '6' || key == '7'){
+    println(int(key));
+    size_box = initial_size_box * (int(key)-48);
+    draw_board_purple();
+  }
+    
+  if (key == '0'){
+    println(int(key));
+    size_box = initial_size_box * 2;
+    draw_board();
+  }
+}
+
 void draw_board_purple(){
-//  background(255); // clear background with white
   // Row 0
-  rect_2(positions_x[0][1],positions_y[0][0]);
-  rect_2(positions_x[0][3],positions_y[0][0]);
-  rect_2(positions_x[0][5],positions_y[0][0]);
+  draw_board();
   
-  rect_2(positions_x[0][48],positions_y[0][0]);
-  rect_2(positions_x[0][50],positions_y[0][0]);
+  rect_2(positions_x[0][2],positions_y[0][0]);
+  rect_2(positions_x[0][4],positions_y[0][0]);
 
   // Row 1
-  rect_2(positions_x[0][2],positions_y[1][0]);
-  rect_2(positions_x[0][4],positions_y[1][0]);
-  rect_2(positions_x[0][6],positions_y[1][0]);
-  rect_2(positions_x[0][8],positions_y[1][0]);
-  rect_2(positions_x[0][10],positions_y[1][0]);
+  rect_2(positions_x[0][1],positions_y[1][0]);
+  rect_2(positions_x[0][3],positions_y[1][0]);
+  rect_2(positions_x[0][5],positions_y[1][0]);
+  rect_2(positions_x[0][7],positions_y[1][0]);
+  rect_2(positions_x[0][9],positions_y[1][0]);
   
   rect_2(positions_x[0][47],positions_y[1][0]);
   rect_2(positions_x[0][49],positions_y[1][0]);
   
   // Row 2
-  rect_2(positions_x[0][3],positions_y[2][0]);
-  rect_2(positions_x[0][5],positions_y[2][0]);
-  rect_2(positions_x[0][7],positions_y[2][0]);
-  rect_2(positions_x[0][9],positions_y[2][0]);
-  rect_2(positions_x[0][11],positions_y[2][0]);
+  rect_2(positions_x[0][2],positions_y[2][0]);
+  rect_2(positions_x[0][4],positions_y[2][0]);
+  rect_2(positions_x[0][6],positions_y[2][0]);
+  rect_2(positions_x[0][8],positions_y[2][0]);
+  rect_2(positions_x[0][10],positions_y[2][0]);
   
   rect_2(positions_x[0][46],positions_y[2][0]);
   rect_2(positions_x[0][48],positions_y[2][0]);
   
   // Row 3
-  rect_2(positions_x[0][6],positions_y[3][0]);
-  rect_2(positions_x[0][8],positions_y[3][0]);
-  rect_2(positions_x[0][10],positions_y[3][0]);
-  rect_2(positions_x[0][12],positions_y[3][0]);
-  rect_2(positions_x[0][14],positions_y[3][0]);
+  rect_2(positions_x[0][5],positions_y[3][0]);
+  rect_2(positions_x[0][7],positions_y[3][0]);
+  rect_2(positions_x[0][9],positions_y[3][0]);
+  rect_2(positions_x[0][11],positions_y[3][0]);
   
   rect_2(positions_x[0][43],positions_y[3][0]);
   rect_2(positions_x[0][45],positions_y[3][0]);
   rect_2(positions_x[0][47],positions_y[3][0]);
   
   // Row 4
-  rect_2(positions_x[0][9],positions_y[4][0]);
-  rect_2(positions_x[0][11],positions_y[4][0]);
-  rect_2(positions_x[0][13],positions_y[4][0]);
   rect_2(positions_x[0][15],positions_y[4][0]);
+  rect_2(positions_x[0][13],positions_y[4][0]);
   
   rect_2(positions_x[0][42],positions_y[4][0]);
   rect_2(positions_x[0][44],positions_y[4][0]);
@@ -353,59 +361,10 @@ void draw_board_purple(){
   rect_2(positions_x[0][7],positions_y[41][0]);
  
   rect_2(positions_x[0][48],positions_y[41][0]);
-  rect_2(positions_x[0][50],positions_y[41][0]);
-
-    
-  
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  rect_2(positions_x[0][50],positions_y[41][0]); 
   
 }
 
-
-void draw(){
-  draw_board_purple();
-  /*if (flag_click){
-    change_rects(my_rects_effect);  
-  } else{
-    change_rects(my_rects_normal);  
-  }
-  draw_chess();*/
- // background(255); // clear background with white
-}
-
-void mouseClicked(){
-  flag_click = !flag_click;
-  println("Click");
-}
-
-void change_rects(int[][]x){
-  for (int i = 0; i < my_rects.length; i++) {
-    for (int j = 0; j < my_rects.length; j++) {
-      my_rects[i][j] = x[i][j];
-    }
-  }
-}
 
 void rect_1 (float r, float c){  // Only white
   fill(255);
